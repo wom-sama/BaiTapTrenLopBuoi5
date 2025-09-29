@@ -16,7 +16,19 @@ namespace Lab03_02
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            // mot chut tuy chinh de co the chay doc lap cac form (chuong trinh se khong tat khi dong form dau tien)
+            Form1 myForm = new Form1();
+            myForm.Show();
+            myForm.FormClosed += new FormClosedEventHandler(OnFormClosed);
+            Application.Run();
+        }
+        public static void OnFormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.ExitThread(); // thoát hẳn app khi không còn form nào
+            }
         }
     }
 }

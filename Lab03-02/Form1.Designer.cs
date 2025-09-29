@@ -45,6 +45,7 @@
             this.B = new System.Windows.Forms.ToolStripButton();
             this.I = new System.Windows.Forms.ToolStripButton();
             this.U = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripComBobox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +57,7 @@
             this.richText.Size = new System.Drawing.Size(788, 369);
             this.richText.TabIndex = 0;
             this.richText.Text = "";
+            this.richText.SelectionChanged += new System.EventHandler(this.richText_SelectionChanged);
             this.richText.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // toolStripComBobox1
@@ -126,7 +128,8 @@
             this.toolStripComboBox3,
             this.B,
             this.I,
-            this.U});
+            this.U,
+            this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 28);
@@ -157,12 +160,14 @@
             // 
             this.toolStripComboBox2.Name = "toolStripComboBox2";
             this.toolStripComboBox2.Size = new System.Drawing.Size(121, 28);
+            this.toolStripComboBox2.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox2_SelectedIndexChanged);
             this.toolStripComboBox2.Click += new System.EventHandler(this.toolStripComboBox2_Click);
             // 
             // toolStripComboBox3
             // 
             this.toolStripComboBox3.Name = "toolStripComboBox3";
             this.toolStripComboBox3.Size = new System.Drawing.Size(121, 28);
+            this.toolStripComboBox3.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox3_SelectedIndexChanged);
             this.toolStripComboBox3.Click += new System.EventHandler(this.toolStripComboBox3_Click);
             // 
             // B
@@ -195,6 +200,12 @@
             this.U.Text = "toolStripButton5";
             this.U.Click += new System.EventHandler(this.U_Click);
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(111, 25);
+            this.toolStripLabel1.Text = "toolStripLabel1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -205,7 +216,7 @@
             this.Controls.Add(this.toolStripComBobox1);
             this.MainMenuStrip = this.toolStripComBobox1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Soạn thảo văn bản";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStripComBobox1.ResumeLayout(false);
             this.toolStripComBobox1.PerformLayout();
@@ -234,6 +245,7 @@
         private System.Windows.Forms.ToolStripButton I;
         private System.Windows.Forms.ToolStripButton U;
         private System.Windows.Forms.ToolStripMenuItem địnhDạngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }
 
