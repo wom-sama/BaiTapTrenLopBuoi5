@@ -184,6 +184,7 @@ namespace Lab03_02
                 Font currentFont = richText.SelectionFont;
                 FontStyle newStyle = currentFont.Style ^ FontStyle.Bold;
                 richText.SelectionFont = new Font(currentFont, newStyle);
+                B.BackColor = richText.SelectionFont.Bold ? Color.Blue : SystemColors.Control;
             }
 
         }
@@ -195,6 +196,7 @@ namespace Lab03_02
                 Font currentFont = richText.SelectionFont;
                 FontStyle newStyle = currentFont.Style ^ FontStyle.Italic;
                 richText.SelectionFont = new Font(currentFont, newStyle);
+                I.BackColor = richText.SelectionFont.Italic ? Color.Blue : SystemColors.Control;
             }
 
         }
@@ -206,6 +208,7 @@ namespace Lab03_02
                 Font currentFont = richText.SelectionFont;
                 FontStyle newStyle = currentFont.Style ^ FontStyle.Underline;
                 richText.SelectionFont = new Font(currentFont, newStyle);
+                U.BackColor = richText.SelectionFont.Underline ? Color.Blue : SystemColors.Control;
             }
 
         }
@@ -237,6 +240,18 @@ namespace Lab03_02
                 float size = float.Parse(toolStripComboBox3.Text);
                 richText.SelectionFont = new Font(fontName, size);
             }
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            //nut mo file
+            mởTậpTinToolStripMenuItem_Click(sender, e);
+
         }
     }
 }
